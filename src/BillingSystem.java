@@ -5,6 +5,7 @@ public class BillingSystem {
         double total=0 ,VAT=0,discount = 0,quantity= 0,order=0 ; String item="";
         String sano_butta="**********************";
         String lamo_butta="*********************************************************************";
+        String t_items="",t_quantity="",t_total="";
         System.out.println(lamo_butta);
         System.out.println("*                              Yawat Cafe                           *");
         System.out.println(lamo_butta);
@@ -40,14 +41,20 @@ public class BillingSystem {
             } else {
                 System.out.println("Order invalid");
             }
+            t_items +="\n"+item;
+            t_quantity+="\n"+  quantity ;
+            t_total+= "\n"+ total ;
             VAT = (13 * total) / 100;
             discount = (10 * total) / 100;
 
         }
+        String ft_items = "Items\t "+t_items;
+        String ft_quantity = "Quantity\t "+t_quantity;
+        String ft_total = "Total\t " +t_total;
         double grand_total = total + VAT - discount;
         System.out.println(lamo_butta);
-        System.out.println("       Items           Quantity            Total");
-        System.out.println("     " + item + "          " + quantity + "            " + total);
+        System.out.println(ft_items+ft_quantity+ft_total);
+//
         System.out.println("Total VAT: " + VAT);
         System.out.println("Total discount: " + discount);
         System.out.println("Grand Total: " + grand_total);
