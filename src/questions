@@ -1,0 +1,9 @@
+1) Create a billing system and generate the bill using the following hint:
+Ask the user the number of items to enter first
+Using a loop iterate ( ask user input that number of times for item name and quantity )
+Calculate total
+Calculate vat
+calculate 10% discount
+Give output in a proper format
+2) Write a program using for loop to create a password checker giving user 5 tries.
+3) Write a program using for loop to Create a result generator ask user number of marks to enter and calculate accordingly.
